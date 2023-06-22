@@ -1,0 +1,80 @@
+1) 
+Вам дана функция-конструктор, с помощью которой можно создавать экземпляры объектов.
+Ваша задача состоит в том, чтобы переписать данную функцию на класс (class).
+
+function Student(name, age) {
+    this.name = name;
+    this.age = age;
+    this.technologies = [];
+    this.status = 'Junior';
+    this.setTechnologies = function (technologies) {
+        this.technologies = [
+            ...this.technologies,
+            ...technologies,
+        ];
+    };
+    this.setNewStatus = function (newStatus) {
+        this.status = newStatus;
+    };
+
+}
+const student = new Student('Maxim', 20);
+student.setTechnologies(['HTML', 'CSS', 'JavaScript']);
+student.setNewStatus('Middle');
+console.log(student);
+
+
+
+
+2) 
+Ваша компания создает внутренний продукт для облегчения контроля за ростом своих разработчиков. Вам поручили задачу реализовать такой продукт.
+Для начала вам необходимо создать класс Developer, конструктор которого будет принимать 3 параметра:
+
+1. fullName - имя разработчика
+2. age - возраст разработчика
+3. position - текущая позиция разработчика в компании (например, Junior, Middle, Senior)
+
+Инициализируйте все параметры при помощи this. Также создайте внутри конструктора поле technologies, которое по умолчанию будет равно пустому массиву.
+
+Кроме этого в классе Developer вам необходимо создать 2 метода:
+1. code - метод, у которого тело изначально пустое (в фигурных скобках ничего нет)
+2. learnNewTechnology - данный метод принимает в себя 1 параметр technology, который должен добавляться в конец массива technologies
+
+После проделанных действий у вас должен получиться шаблон Developer, благодаря которому вы будете создавать дочерние классы.
+
+Вам сейчас необходимо создать 3 дочерних класса от класса Developer:
+
+1. JuniorDeveloper. Конструктор данного класса принимает 2 параметра: fullName и age. Вызовите конструктор родительского класса и передайте туда эти 2 параметра. В качестве 3-го у нас выступает position. Вам необходимо его указать по умолчанию. Напишите значение “Junior” в качестве 3-го параметра вызова родительского конструктора. Кроме этого переопределить метод code, чтобы он выводил в консоль строку “Junior разработчик пишет код...”. Массив technologies должен содержать следующие технологии: 'HTML', 'CSS', 'JavaScript'
+
+2. MiddleDeveloper. Проделайте ту же самую работу в конструкторе, что и JuniorDeveloper. Только на место position передавайте значение “Middle”. Метод code у класса MiddleDeveloper должен выводить в консоль строку “Middle разработчик пишет код...”. Массив technologies должен содержать следующие
+технологии: 'HTML', 'CSS', 'JavaScript', ‘React’ 
+
+3. SeniorDeveloper. Проделайте ту же самую работу в конструкторе, что и JuniorDeveloper. Только на место position передавайте значение “Senior”. Метод code у класса SeniorDeveloper должен выводить в консоль строку “Senior разработчик пишет код...”. Массив technologies должен содержать следующие технологии: 'HTML', 'CSS', 'JavaScript', ‘React’, ‘NodeJS’
+
+
+Примечание: когда вы переопределите метод code в дочерних классах, то вы используете принцип Полиморфизм.
+
+
+Тестируйте написанные классы с помощью этого кода:
+
+const juniorDeveloper = new JuniorDeveloper('Анастасия', 20)
+const middleDeveloper = new MiddleDeveloper('Игорь', 25)
+const seniorDeveloper = new SeniorDeveloper('Максим', 30)
+
+juniorDeveloper.code(); // Junior разработчик пишет код...
+middleDeveloper.code(); // Middle разработчик пишет код…
+seniorDeveloper.code(); // Senior разработчик пишет код...
+
+console.log(juniorDeveloper.fullName, juniorDeveloper.age, juniorDeveloper.position); // 'Анастасия', 20, 'Junior'
+
+console.log(middleDeveloper.fullName, middleDeveloper.age, middleDeveloper.position); // 'Игорь', 25, 'Middle'
+
+console.log(seniorDeveloper.fullName, seniorDeveloper.age, seniorDeveloper.position); // 'Максим', 30, 'Senior'
+
+
+
+3) 
+
+Создать класс Device который создает объекты с полем isSwitchedOn (булево) и методом .switch() оторый переключает флаг isSwitchedOn с true на false и наоборот
+
+Создать класс Smartphone, который принимает model и price и создает объект с этими полями. У созданного объекта в прототипе должен быть метод .callSmbd(string) оторый выводит в консоль сообщение "you are calling ${string}". Этот метод работает только если девайс isSwitchedOn === true, иначе вывести сообщение "your device is switched off, you can't call anyone"

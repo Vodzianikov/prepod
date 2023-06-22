@@ -1,0 +1,119 @@
+const person1 = {
+    name: 'John',
+    age: 23,
+    isProgrammer: true,
+    tech: ['HTML', 'CSS', 'JS']
+};
+
+const person2 = {
+    name: 'David',
+    age: 34,
+    isProgrammer: false,
+    tech: ['DIG', 'BUILD', 'RUN']
+};
+
+const person3 = {
+    name: 'Peter',
+    age: 41,
+    isProgrammer: false,
+    tech: ['JUMP', 'SPEAK', 'READ']
+};
+
+const person4 = {
+    name: 'Gregory',
+    age: 54,
+    isProgrammer: true,
+    tech: ['JAVA', 'NGINX', 'PYTHON']
+};
+
+const persons = [person1, person2, person3, person4];
+
+const arr = [
+    { a: 2, b: 1 },
+    { a: 5, b: 12 },
+    { a: 95, b: 7 }
+];
+
+
+Используя МЕТОДЫ массивов
+
+1. вывести в консоль 'its valid' если во всех объектах поле a > b, иначе вывести 'its invalid'
+2. на основе массива arr, создать массив объектов у которых поле b возведено в квадрат
+3. с помощью метода/методов взять все поля a и b и последовательно поместить их в массив
+пример: [2,1,5,12,95,7];
+
+
+
+-----------------------------------------------------------------------------
+4. с помощью метода/методов массива пробежать по массиву persons
+и КАЖДУЮ СЕКУНДУ выводить сообщения из массива tech
+пример
+'John can HTML'
+'John can CSS'
+'John can JS'
+'David can DIG'
+'David can BUILD'
+'David can RUN'
+...
+'Gregory can JAVA'
+'Gregory can NGINX'
+'Gregory can PYTHON'
+
+
+
+
+
+const person = {
+   name: 'Mr. John',
+   age: 23,
+   isProgrammer: true,
+   tech: ['HTML','CSS','JS'],
+   //becomeProgrammer : becomeProgrammer,
+   //beOlder: beOlder,
+   //becomeMister: becomeMister
+};
+
+
+const person2 = {
+   name: 'David',
+   age: 34,
+   isProgrammer: false,
+   tech: ['DIG','BUILD','RUN'],
+   //becomeProgrammer : becomeProgrammer,
+   //beOlder: beOlder,
+   //becomeMister: becomeMister
+};
+
+
+5) Объектам типа person создать метод become a programmer который переключает свойство isProgrammer объекта в true (если оно еще не true)
+6) Объектам типа person создать метод beOlder() который делает возраст person больше на 1
+7) Создать метод becomeMister который добавляет в person.name "Mr. " перед именем если там еще нет "Mr. "
+
+
+
+
+8) Вам необходимо создать функцию, которая будет работать с объектами. Назовите ее handleObject.
+handleObject принимает в себя 3 параметра:
+
+1. obj. Объект, с которым будет работать функция
+2. key. ключ объекта
+3. action. Действие, которое мы будем совершать над объектом
+
+Параметр action может быть 4-мя значениями:
+1. 'get'. Если action равен 'get', то функция handleObject должна вернуть значение ключа key в объекте obj.
+2. 'add'. Если action равен 'add', то функция handleObject должна добавить новый ключ key в объект object и присвоить значение пустой строки ''. Также из функции необходимо возвратить обновленный объект obj.
+3. 'delete'. Если action равен 'delete', то функция handleObject должна удалить свойство key из объекта obj и возвратить обновленный объект.
+4.Если action равен любому другому значению, то функция handleObject должна возвратить объект obj.
+
+Протестируйте функцию на этом коде:
+
+const student = {
+name: 'Maxim',
+programmingLanguage: 'JavaScript',
+}
+
+const result = handleObjects(student, 'programmingLanguage', 'delete');
+console.log('result', result);
+
+
+

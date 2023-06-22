@@ -1,0 +1,47 @@
+1) Дан массив объектов с пользователями. Используя методы массивов вывести в консоль сообщение "Users online:  Vadim, Alex, David, John, Alena"
+const users = [
+    {
+        userName: 'Volha',
+        isOnline: false,
+    },
+    {
+        userName: 'Vadim',
+        isOnline: true,
+    },
+    {
+        userName: 'Petr',
+        isOnline: false,
+    },
+    {
+        userName: 'Alex',
+        isOnline: true,
+    },
+    {
+        userName: 'David',
+        isOnline: true,
+    },
+    {
+        userName: 'John',
+        isOnline: true,
+    },
+    {
+        userName: 'Valera',
+        isOnline: false,
+    },
+    {
+        userName: 'Alena',
+        isOnline: true,
+    },
+];
+
+
+
+2) Написать функцию, которая при вызове подсчитывает количество своих вызовов, функция должна уметь принимать числовой аргумент для указания текущего количества вызовов
+
+foo() -> 1
+foo() -> 2
+foo() -> 3
+foo(100) -> 100
+foo() -> 101
+foo(0) -> 0
+foo() -> 1
